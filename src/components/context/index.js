@@ -49,5 +49,3 @@ export const Provider = (props) => {
     </ScoreboardContext.Provider>
   );
 }
-
-export const Consumer = ScoreboardContext.Consumer;

@@ -3,8 +3,8 @@ import { ScoreboardContext } from './context';
 
 const AddPlayerForm = () => {
   const { actions } = useContext(ScoreboardContext);
-  let playerInput = useRef();
-  let handleSubmit = (e) => {
+  const playerInput = useRef();
+  const handleSubmit = (e) => {
     e.preventDefault();
     actions.addPlayer(playerInput.current.value);
     e.currentTarget.reset();
