@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ScoreboardContext } from './context';
+import { ScoreboardContext } from './Context';
 import PropTypes from 'prop-types';
 import Counter from './Counter';
 

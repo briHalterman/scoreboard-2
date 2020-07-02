@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Provider } from './components/context';
-import App from './components/App';
+import { Provider } from './Components/Context';
+import App from './Components/App';
 import './index.css';
 
 ReactDOM.render(

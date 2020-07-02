@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ScoreboardContext } from './context';
+import { ScoreboardContext } from './Context';
 
 const Stats = () => {
   const context = useContext(ScoreboardContext);

@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import { ScoreboardContext } from './context';
+import { ScoreboardContext } from './Context';
 
 const AddPlayerForm = () => {
   const { actions } = useContext(ScoreboardContext);

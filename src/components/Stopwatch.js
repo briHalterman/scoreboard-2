@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useInterval from '../hooks/useInterval';
+import useInterval from '../Hooks/useInterval';
 
 const Stopwatch = () => {
   const [count, setCount] = useState(0);
