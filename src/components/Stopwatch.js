@@ -1,29 +1,25 @@
-import React, { useState } from 'react';
-import useInterval from '../Hooks/useInterval';
+import React, { useEffect, useState } from 'react';
 
 const Stopwatch = () => {
-  const [count, setCount] = useState(0);
-  const [delay] = useState(1000);
+  const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
-  useInterval(() => {
-    setCount(count + 1);
-  }, isRunning ? delay : null);
-
-  const handleIsRunningChange = () => { 
-    if (!isRunning) {
-      setIsRunning(true);
-    } else {
-      setIsRunning(false);
+  useEffect(() => {
+    if (isRunning) {
+      const interval = setInterval(() => {
+        setSeconds(seconds + 1);
+      }, 1000);
+      return () => clearInterval(interval); 
     }
-  };
+  }, [isRunning, seconds]);
 
-  const handleReset = () => setCount(0);
+  const handleIsRunningChange = () => setIsRunning(prevState => !prevState);
+  const handleReset = () => setSeconds(0);
 
   return ( 
     <div className="stopwatch">
       <h2>Stopwatch</h2>
-      <span className="stopwatch-time">{ count }</span>
+      <span className="stopwatch-time">{ seconds }</span>
       <button onClick={handleIsRunningChange}>
         { isRunning ? 'Stop' : 'Start' }
       </button>
