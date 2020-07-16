@@ -5,7 +5,6 @@ import Counter from './Counter';
 
 const Player = ({ index }) => {
     const { players, actions } = useContext(ScoreboardContext);
-    console.log('i rendered')
     return ( 
       <div className="player">
         <span className="player-name">

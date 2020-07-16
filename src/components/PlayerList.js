@@ -3,10 +3,10 @@ import { ScoreboardContext } from './Context';
 import Player from './Player';
 
 const PlayerList = () => {
-  const context = useContext(ScoreboardContext);
+  const { players } = useContext(ScoreboardContext);
   return (
     <>
-      {context.players.map( (player, index) => 
+      {players.map( (player, index) => 
         <Player 
           key={player.id} 
           index={index}

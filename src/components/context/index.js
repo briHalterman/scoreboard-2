@@ -4,7 +4,7 @@ export const ScoreboardContext = React.createContext()
 let id = 0;
 
 export const Provider = (props) => {
-  const [players, setPlayers] = useState([ ]);
+  const [players, setPlayers] = useState([]);
 
   const handleScoreChange = (index, delta) => {
     setPlayers(prevState => {
@@ -47,4 +47,4 @@ export const Provider = (props) => {
       { props.children }
     </ScoreboardContext.Provider>
   );
-}
+};

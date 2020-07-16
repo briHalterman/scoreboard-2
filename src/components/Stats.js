@@ -2,10 +2,9 @@ import React, { useContext } from 'react';
 import { ScoreboardContext } from './Context';
 
 const Stats = () => {
-  const context = useContext(ScoreboardContext);
-
-  const totalPlayers = context.players.length;
-  const totalPoints = context.players.reduce( (total, player) => {
+  const { players } = useContext(ScoreboardContext);
+  const totalPlayers = players.length;
+  const totalPoints = players.reduce( (total, player) => {
     return total + player.score;
   }, 0);
 
