@@ -9,14 +9,14 @@ const Stopwatch = () => {
       const interval = setInterval(() => {
         setSeconds(seconds + 1);
       }, 1000);
-      return () => clearInterval(interval); 
+      return () => clearInterval(interval);
     }
   }, [isRunning, seconds]);
 
   const handleIsRunningChange = () => setIsRunning(prevState => !prevState);
   const handleReset = () => setSeconds(0);
 
-  return ( 
+  return (
     <div className="stopwatch">
       <h2>Stopwatch</h2>
       <span className="stopwatch-time">{ seconds }</span>
@@ -24,7 +24,7 @@ const Stopwatch = () => {
         { isRunning ? 'Stop' : 'Start' }
       </button>
       <button onClick={handleReset}>Reset</button>
-    </div>    
+    </div>
   );
 };
 
