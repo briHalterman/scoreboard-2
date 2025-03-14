@@ -1,12 +1,11 @@
-import React, { useContext, useRef } from 'react';
-import { ScoreboardContext } from './Context';
+import React, { useRef } from 'react';
 
 const AddPlayerForm = () => {
-  const { actions } = useContext(ScoreboardContext);
   const playerInput = useRef();
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    actions.addPlayer(playerInput.current.value);
+    // actions.addPlayer(playerInput.current.value);
     e.currentTarget.reset();
   }
 

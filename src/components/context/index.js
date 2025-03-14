@@ -37,7 +37,7 @@ export const Provider = (props) => {
 
   return (
     <ScoreboardContext.Provider value={{ 
-      players: players,
+      players,
       actions: {
         changeScore: handleScoreChange,
         addPlayer: handleAddPlayer,
